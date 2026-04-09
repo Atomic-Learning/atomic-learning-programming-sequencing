@@ -1,19 +1,18 @@
 {
-    "title": "",
-    "slug": "",
-    "description": "",
+    "title": "Atomic Learning: Sequencing Programming Pages",
+    "slug": "atomic-learning-programming-sequencing",
+    "description": "A description of how to sequence pages relating to programming in the Atomic Learning platform. Includes discussion of language-agnostic pages and disciplinary examples and exercises.",
     "authors": [
-        "",
-        ""
+        "chris-cooling"
     ],
     "tags": [
-        "",
-        ""
+        "atomic-learning",
+        "programming"
     ],
-    "duration": 0,
+    "duration": 5,
     "prerequisites": [
-        "",
-        ""
+        "atomic-learning-sequencing",
+        "atomic-learning-pseudocode"
     ],
     "related": [
         "",
