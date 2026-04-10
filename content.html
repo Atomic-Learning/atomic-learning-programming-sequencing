@@ -9,7 +9,7 @@
 <div class="mermaid">
     flowchart TD
         accTitle: Programming Page Sequencing
-        accDescr: A flowchart showing the sequence of programming pages. Programming: Variables is a prerequisite for Programming: Functions, Python: Variables and Java: Variables. Programming: Functions is a prerequisite for Python: Functions and Java: Functions. Python: Variables is a prerequisite for Python: Functions and Java: Variables is a prerequisite for Java: Functions.
+        accDescr: A flowchart showing the sequence of programming pages. Programming: Variables is a prerequisite for Python: Variables, Programming: Functions and Java: Variables; Programming: Functions is a prerequisite for both Python: Functions and Java: Functions; Python: Variables is a prerequisite for Python: Functions; Java: Variables is a prerequisite for Java: Functions.
         A[Programming: Variables] --> C[Python: Variables]
         A --> B[Programming: Functions]
         A --> D[Java: Variables]
@@ -19,6 +19,36 @@
         D --> F
 </div>
 
-<p>The diagram above shows how a theoretical series of related programming pages could be sequenced. Notice how the language-agnostic pages serve as foundational building blocks for the more specific language-based pages.</p>
+<p>The diagram above shows how a theoretical series of related programming pages could be sequenced. This type of relationship has two key advantages:</p>
+
+<ul>
+    <li>The foundational language-agnostic concepts only need to be written once, and can be reused across many different language-specific pages.</li>
+    <li>If a learner already knows one programming language, learning a new one will only require learning the language-specific syntax and features.</li>
+</ul>
 
 <p>Language-agnostic pages will often require the demonstration of the basics of syntax, and this can be done using pseudocode. When pseudocode is used, the goal should be to clearly demonstrate the common syntactic structures, avoiding specific nuances of any particular programming language. Pages containing pseudocode should use the <code>pseudocode</code> tag in their metadata files. This automatically adds a warning to the top of the page which highlights to users that the code in the page is not "real" code.</p>
+
+<h2>Discipline-Specific Examples and Exercises</h2>
+
+<p>In most cases, the pages which teach the foundations of programming (either in a language-agnostic way or relating to a particular language) should use examples to demonstrate the concepts, features or syntax which are:</p>
+
+<ul>
+    <li><strong>Simple</strong>: Learners should not experience unnecessary cognitive load understanding the situation being used as an example.</li>
+    <li><strong>Minimal</strong>: Examples should be concise to minimise length, whilst demonstrating the concept, feature or syntax.</li>
+    <li><strong>Discipline-agnostic</strong>: Examples should be relevant to learners from various disciplines, avoiding domain-specific details that would otherwise require additional pre-requisites.</li>
+</ul>
+
+<p>However, it is encouraged to add additional pages which provide complex, extensive and discipline-specific content that use these core pages as prerequisites. This allows learners to see how the concept, feature or syntax they have just learned about in the abstract can be applied in real-world scenarios relevant to their discipline. An example collection of pages might look like the one below:</p>
+
+<div class="mermaid">
+    flowchart TD
+        accTitle: Programming Page Sequencing with Discipline-Specific Examples
+        accDescr: A flowchart showing the sequence of programming pages. Programming Prerequisites is a prerequisite for Python: Functions; Python: Functions is a prerequisite for both Physics Example and Medicine Example; Physics Prerequisites is a prerequisite for Physics Example; Medicine Prerequisites is a prerequisite for Medicine Example.
+        C[Physics Prerequisites] --> D[Physics Example]
+        A[Programming Prerequisites] --> B[Python: Functions]
+        E[Medicine Prerequisites] --> F[Medicine Example]
+        B --> D
+        B --> F
+</div>
+
+<p>This means examples which are used to teach the content in pages like Python: Functions are likely to be generic and minimal, such as adding two numbers together. This minimises the prerequisites of the page and the cognitive load required when learning these new concepts. When constructing a Learning Path, it is often good practice to include more complex or discipline-specific examples and exercises so learners can also see the applications of what they have learned in a more interesting and practical way.</p>
